@@ -11,11 +11,11 @@ from google import genai
 from ragas import evaluate
 from ragas.embeddings import GoogleEmbeddings
 from ragas.llms import llm_factory
-from ragas.metrics.collections import (
-    AnswerRelevancy,
-    ContextPrecision,
-    ContextRecall,
-    Faithfulness,
+from ragas.metrics import (
+    answer_relevancy,
+    context_precision,
+    context_recall,
+    faithfulness,
 )
 
 import config
@@ -58,18 +58,10 @@ def _build_ragas_embeddings(client):
     return GoogleEmbeddings(client=client, model=config.EMBEDDING_MODEL)
 
 
-def _select_metrics(llm, embeddings, has_ground_truth: bool) -> list:
-    metrics = [
-        Faithfulness(llm=llm),
-        AnswerRelevancy(llm=llm, embeddings=embeddings),
-    ]
+def _select_metrics(has_ground_truth: bool) -> list:
+    metrics = [faithfulness, answer_relevancy]
     if has_ground_truth:
-        metrics.extend(
-            [
-                ContextPrecision(llm=llm),
-                ContextRecall(llm=llm),
-            ]
-        )
+        metrics.extend([context_precision, context_recall])
     return metrics
 
 
@@ -113,13 +105,18 @@ def run_evaluation(pdf_path: Path, dataset_path: Path) -> dict:
     client = _build_ragas_client()
     llm = _build_ragas_llm(client)
     embeddings = _build_ragas_embeddings(client)
-    metrics = _select_metrics(llm, embeddings, has_ground_truth)
+    metrics = _select_metrics(has_ground_truth)
 
     logger.info(
         "Running RAGAS with metrics: %s",
-        ", ".join(metric.__class__.__name__ for metric in metrics),
+        ", ".join(metric.name for metric in metrics),
     )
-    result = evaluate(eval_dataset, metrics=metrics)
+    result = evaluate(
+        eval_dataset,
+        metrics=metrics,
+        llm=llm,
+        embeddings=embeddings,
+    )
     return result.to_pandas()
 
 
