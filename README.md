@@ -53,6 +53,24 @@ npm run dev
 
 Open http://localhost:5173 — the Vite dev server proxies `/api` to the backend.
 
+## RAGAS evaluation
+
+Offline evaluation for the retrieval + generation pipeline (`backend/evaluation/`).
+
+| Metric | What it measures | Needs ground truth? |
+|--------|------------------|---------------------|
+| Faithfulness | Is the answer supported by retrieved chunks? (hallucination check) | No |
+| Answer relevancy | Does the answer actually address the question? | No |
+| Context precision | Are the retrieved chunks relevant and well-ranked? | Yes |
+| Context recall | Did retrieval find enough info to answer correctly? | Yes |
+
+```bash
+cd backend
+python -m evaluation.ragas_eval --pdf path/to/document.pdf --dataset evaluation/sample_dataset_small.json
+```
+
+Dataset format: JSON array of `{"question": "...", "ground_truth": "..."}`. `ground_truth` is optional; without it, only faithfulness and answer relevancy run.
+
 ## Logging
 
 Backend logs go to stdout. Set optional env vars in `.env`:
