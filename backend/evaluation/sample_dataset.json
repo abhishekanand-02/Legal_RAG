@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Who is the petitioner in this case?",
+    "ground_truth": "Sanjay Kumar"
+  },
+  {
+    "question": "What is the father's name of Sanjay Kumar?",
+    "ground_truth": "Naresh Prasad"
+  },
+  {
+    "question": "What is the case number of this writ petition?",
+    "ground_truth": "Civil Writ Jurisdiction Case No. 2413 of 2020"
+  },
+  {
+    "question": "In which High Court was this case heard?",
+    "ground_truth": "High Court of Judicature at Patna"
+  },
+  {
+    "question": "On what date was the judgment delivered?",
+    "ground_truth": "09-07-2020"
+  },
+  {
+    "question": "What was the registration number of the motorcycle sought to be released?",
+    "ground_truth": "BR-21-H-0998"
+  },
+  {
+    "question": "Which police station case was connected to the seized motorcycle?",
+    "ground_truth": "Kauakol (Rupau) P.S. Case No. 59/18"
+  },
+  {
+    "question": "On what date was Kauakol (Rupau) P.S. Case No. 59/18 registered?",
+    "ground_truth": "21.03.2018"
+  },
+  {
+    "question": "Under which section of the Bihar Prohibition and Excise Act was the police case registered?",
+    "ground_truth": "Section 30(a)"
+  },
+  {
+    "question": "In which court was the related criminal case pending?",
+    "ground_truth": "Court of Special Judge Excise Act, Nawada"
+  },
+  {
+    "question": "What relief did the petitioner seek in this writ petition?",
+    "ground_truth": "Release of the Passion Pro motorcycle bearing registration number BR-21-H-0998"
+  },
+  {
+    "question": "Which state is involved in this case?",
+    "ground_truth": "Bihar"
+  },
+  {
+    "question": "Who was the first respondent in this case?",
+    "ground_truth": "The State of Bihar through Principal Secretary, Department of Excise and Prohibition, Government of Bihar, Patna"
+  },
+  {
+    "question": "Who represented the petitioner?",
+    "ground_truth": "Mr. Subodh Kumar, Mr. Mayank Kumar, and Mr. Priya Ranjan Kumar"
+  },
+  {
+    "question": "Who represented the respondents?",
+    "ground_truth": "Mr. Vikash Kumar (SC-11)"
+  },
+  {
+    "question": "Which Act is discussed extensively in the judgment?",
+    "ground_truth": "The Bihar Prohibition and Excise Act, 2016"
+  },
+  {
+    "question": "According to the judgment, what activities does Section 13 of the Bihar Prohibition and Excise Act prohibit unless otherwise allowed?",
+    "ground_truth": "Manufacture, storage, distribution, transportation, possession, sale, purchase, and consumption of intoxicants or liquor"
+  },
+  {
+    "question": "Which section of the Act lays down the procedure for confiscation of things used in the commission of an offence?",
+    "ground_truth": "Section 56"
+  },
+  {
+    "question": "Under Section 56, are vehicles used for carrying intoxicants liable for confiscation?",
+    "ground_truth": "Yes, vehicles used for carrying intoxicants are liable for confiscation."
+  },
+  {
+    "question": "Under which section does the power to issue an order of confiscation vest with the District Collector or Authorized Officer?",
+    "ground_truth": "Section 58"
+  },
+  {
+    "question": "Who has the authority to issue an order of confiscation under the Act?",
+    "ground_truth": "The District Collector or Authorized Officer"
+  },
+  {
+    "question": "What remedy is available against a confiscation order under the Act?",
+    "ground_truth": "Appeal under Section 92 and Revision under Section 93"
+  },
+  {
+    "question": "Which previous case did the petitioner rely upon for disposal of the petition?",
+    "ground_truth": "Md. Shaukat Ali vs. The State of Bihar (CWJC No. 20598 of 2019)"
+  },
+  {
+    "question": "Which other case was cited along with Md. Shaukat Ali?",
+    "ground_truth": "Umesh Sah versus the State of Bihar & Ors. (CWJC No. 17165 of 2019)"
+  },
+  {
+    "question": "Which case decided on 29.01.2020 was also relied upon by the petitioner?",
+    "ground_truth": "Bunilal Sah @ Munilal Sah (CWJC No. 2050 of 2020)"
+  },
+  {
+    "question": "What issue did the Court observe regarding confiscation proceedings?",
+    "ground_truth": "Many cases involved non-initiation of confiscation proceedings or illegal confiscation orders."
+  },
+  {
+    "question": "According to the Court, what was one reason for the large number of petitions being filed?",
+    "ground_truth": "Failure to initiate confiscation proceedings under Section 58."
+  },
+  {
+    "question": "According to the Court, what happens after the seizing officer submits a report regarding seized property?",
+    "ground_truth": "The District Collector or Authorized Officer is required to pass an order regarding confiscation."
+  },
+  {
+    "question": "Under Section 56(e), what kind of premises may be confiscated?",
+    "ground_truth": "Premises used for storing or manufacturing liquor or intoxicants or for committing any offence under the Act."
+  },
+  {
+    "question": "According to the explanation to Section 56, what does the term 'premises' include?",
+    "ground_truth": "The immovable structure, all movable items within the structure, and the land on which the premises is situated."
+  }
+]

@@ -1,0 +1,14 @@
+[
+    {
+      "question": "Who is the petitioner in this case?",
+      "ground_truth": "Sanjay Kumar"
+    },
+    {
+      "question": "What is the father's name of Sanjay Kumar?",
+      "ground_truth": "Naresh Prasad"
+    },
+    {
+      "question": "What is the case number of this writ petition?",
+      "ground_truth": "Civil Writ Jurisdiction Case No. 2413 of 2020"
+    }
+  ]
